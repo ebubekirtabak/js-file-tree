@@ -1,0 +1,25 @@
+.explorer-file-item {
+    font-size: 16px;
+    margin-top: 10px;
+    span {
+        font-size: 1em;
+        margin-right: 5px;
+    }
+
+    &__head {
+        display: flex;
+        align-items: center;
+        transition: 0.2s;
+        width: 100%;
+        cursor: pointer;
+        color: #8f8f8f;
+        border-radius: 7px;
+        background-color: #FFFFFF;
+        padding: 5px 10px;
+
+        &:hover {
+            color: #292F69 ;
+            background-color: rgba(133, 143, 237, 0.2);
+        }
+    }
+}
