@@ -8,7 +8,7 @@ const ItemEditor = (props) => {
     };
 
     return (
-        <div className="item-editor">
+        <div className="item-editor" data-testid="item-editor">
             <input 
                 type="text"
                 name="newName"
