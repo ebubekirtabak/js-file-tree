@@ -21,5 +21,9 @@
             color: #292F69 ;
             background-color: rgba(133, 143, 237, 0.2);
         }
+
+        &.hide {
+            display: none;
+        }
     }
 }
