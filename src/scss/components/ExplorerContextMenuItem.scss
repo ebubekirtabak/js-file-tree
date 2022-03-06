@@ -1,0 +1,28 @@
+.explorer-context-menu-item {
+    display: flex;
+    align-items: center;
+    transition: 0.2s;
+    width: auto;
+    cursor: pointer;
+    color: #8f8f8f;
+    border-radius: 7px;
+    background-color: #FFFFFF;
+    padding: 5px 10px;
+
+    &.active {
+        color: #292F69 ;
+        background-color: rgba(133, 143, 237, 0.2);
+        transform: rotate(0deg);
+        transition: transform .3s linear;
+    }
+
+    &:hover {
+        color: #292F69 ;
+        background-color: rgba(133, 143, 237, 0.2);
+    }
+    span {
+        font-size: 1em;
+        margin-right: 5px;
+    }
+
+}
