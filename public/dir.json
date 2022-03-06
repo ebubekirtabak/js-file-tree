@@ -1,19 +1,25 @@
 {
-    "dir": [
-        { 
-          "type": "folder",
-          "name": "Home",
-          "path": "/Home",
+  "dir": [
+    { 
+      "type": "folder",
+      "name": "Home",
+      "path": "/Home",
+      "files": [
+        { "type": "file", "name": "note.txt", "path": "/Home" },
+        { "type": "folder", "name": "User", "path": "/Home/User",
           "files": [
-            { "type": "file", "name": "note.txt" },
-            { "type": "folder", "name": "User", "path": "/Home/User",
+            { "type": "file", "path": "/Home/User/UserSettings.txt", "name": "UserSettings.txt" },
+            { "type": "file", "path": "/Home/User/UserNotes.txt", "name": "UserNotes.txt" },
+            { "type": "file", "path": "/Home/User/UserSettings(2).txt", "name": "UserSettings(2).txt" },
+            { "type": "folder", "name": "Document", "path": "/Home/User/Documents",
               "files": [
-                { "type": "file", "path": "/Home/User/UserSettings.txt", "name": "UserSettings.txt" },
-                { "type": "file", "path": "/Home/User/UserNotes.txt", "name": "UserNotes.txt" },
-                { "type": "file", "path": "/Home/User/UserSettings(2).txt", "name": "UserSettings(2).txt" }
+                { "type": "file", "path": "/Home/User/Documents/image.jpg", "name": "image.jpg" },
+                { "type": "file", "path": "/Home/User/Documents/jave.log", "name": "jave.log" }
               ]
             }
           ]
         }
       ]
+    }
+  ]
 }
