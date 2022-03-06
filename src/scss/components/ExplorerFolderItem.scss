@@ -18,7 +18,7 @@
         padding: 5px 10px;
 
         &.active {
-            color: #292F69 ;
+            color: #292F69;
             background-color: rgba(133, 143, 237, 0.2);
             transform: rotate(0deg);
             transition: transform .3s linear;
@@ -26,6 +26,10 @@
                 transform: rotate(90deg);
                 transition: transform .3s linear;
             }
+        }
+
+        &.hide {
+            display: none;
         }
 
         &:hover {
@@ -39,10 +43,12 @@
         max-height: 0;
         opacity: 0;
         transition: max-height .6s linear, opacity .2s;
+        visibility: hidden;
         &.active {
             max-height: 800px;
             transition: max-height .6s linear, opacity .2s;
             opacity: 1;
+            visibility: visible;
         }
     }
 }
