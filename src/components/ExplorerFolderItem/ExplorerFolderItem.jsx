@@ -2,6 +2,8 @@ import { useState } from "react";
 import ExplorerFileItem from "../ExplorerFileItem/ExplorerFileItem";
 import ItemEditor from '../ItemEditor/ItemEditor';
 import ExplorerContextMenu from '../ExplorerContextMenu/ExplorerContextMenu';
+import { useDispatch } from 'react-redux';
+import { updateFolderName } from '../../store/actions/FolderActions';
 
 const ExplorerFolderItem = (props) => {
     const { folder } = props;
@@ -9,6 +11,7 @@ const ExplorerFolderItem = (props) => {
     const [ active, setActive ] = useState(false);
     const [showContextMenu, setShowContextMenu] = useState(false);
     const [contextAction, setContextAction] = useState('');
+    const dispatch = useDispatch();
 
     const folders = files.filter(({ type }) => type === "folder");
     const fileList = files.filter(({ type }) => type === "file");
@@ -18,6 +21,7 @@ const ExplorerFolderItem = (props) => {
                 contextAction === 'edit' && (<ItemEditor value={name} onSubmitNewName={(newName) => {
                     console.log(newName);
                     setContextAction('');
+                    dispatch(updateFolderName(folder, newName));
                 }} />)
             }
             <div 
