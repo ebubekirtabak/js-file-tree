@@ -2,7 +2,7 @@ import ExplorerContextMenu from "../ExplorerContextMenu/ExplorerContextMenu";
 import { useState } from 'react';
 import ItemEditor from '../ItemEditor/ItemEditor';
 import { useDispatch } from 'react-redux';
-import { updateFileName } from '../../store/actions/FileActions';
+import { removeFile, updateFileName } from '../../store/actions/FileActions';
 
 const ExplorerFileItem = (props) => {
   const { file } = props;
@@ -33,6 +33,7 @@ const ExplorerFileItem = (props) => {
       <ExplorerContextMenu show={showContextMenu} handleMenuItemClick={(type) => {
         setShowContextMenu(false)
         setContextAction(type)
+        type === 'delete' && dispatch(removeFile(file));
       }} />
     </div>
   );
